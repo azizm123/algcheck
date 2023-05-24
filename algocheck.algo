@@ -1,0 +1,20 @@
+ALGORITHM Sentence
+VAR
+    long= 0
+    wordc= 1
+    vowelc= 0
+    car= CHAR
+BEGIN
+    REPEAT
+        write ("donner un caractère");
+        read(car);
+        long := long + 1;
+        IF (majus(car)="A" OR majus(car)= "E" OR majus(car)= "U" OR majus(car)= "I" OR majus(car)= "Y" OR majus(car)= "O") THEN
+            vowelc += 1;
+        END_IF
+        IF (car = ' ') THEN
+            wordc = wordc + 1;
+        END_IF
+    UNTIL (car='.');
+    write("le long du phrase est",long,"le nombre des voyels est",vowelc,"le nombre des mots est",wordc)
+END
